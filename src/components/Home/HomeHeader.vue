@@ -27,9 +27,9 @@
             <div class="relative">
                 <div class="absolute bottom-0 right-3.5 h-fit">
                     <NuxtLink class="flex items-center gap-1 font-medium border-b-[1px] border-b-custom-blue py-1"><span
-                            class="text-[7px] lg:text-base text-custom-blue">Building a brighter future
+                            class="text-[7px] lg:text-base text-custom-blue font-medium">Building a brighter future
                         </span>
-                        <svg class="w-7 aspect-square lg:w-[14px]" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-[7px] aspect-square lg:w-[14px]" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.405594 3.5002C0.405594 3.69001 0.559353 3.84395 0.749344 3.84395H5.60818L3.90218 6.40327C3.79679 6.56122 3.83942 6.77472 3.99751 6.87994C4.05629 6.91906 4.12239 6.93769 4.18788 6.93769C4.29897 6.93769 4.40808 6.88397 4.47422 6.78462L6.66394 3.5002L4.47422 0.215767C4.36913 0.0576418 4.15632 0.014845 3.99754 0.120445C3.83942 0.225701 3.79679 0.43917 3.90222 0.597123L5.60818 3.15645H0.749344C0.559353 3.15645 0.405594 3.31038 0.405594 3.5002Z"
                                 fill="#254166" />

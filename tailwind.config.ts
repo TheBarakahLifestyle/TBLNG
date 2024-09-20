@@ -16,7 +16,7 @@ export default <Partial<Config>>{
         merriweather: ['Merriweather', ...defaultTheme.fontFamily.sans]
       },
       maxWidth: {
-        container: "1280px"
+        container: "1280px" //"1440px" //1280px
       }
     }
   }

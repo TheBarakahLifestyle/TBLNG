@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <footer class="relative ">
+    <footer class="relative lg:mt-[110px]">
         <section class="px-4">
             <div class="py-6 mx-auto max-w-container relative lg:flex lg:gap-x-[76px] w-full">
                 <div class="flex flex-col lg:flex-row lg:items-center gap-x-4 gap-y-[28px]">
