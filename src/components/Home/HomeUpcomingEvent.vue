@@ -24,7 +24,7 @@
 
         <div class="rounded-[9px] bg-[#F4F4F4] px-2.5 lg:px-6 pb-4 relative pt-[100px] lg:pt-[152px] h-fit lg:max-w-[524px]">
             <img src="@/assets/images/home-event-round-image.jpg"
-                class="w-[141px] bg-red-500 aspect-square rounded-full absolute top-0 -translate-y-1/2 -left-2.5" />
+                class="w-[141px]  aspect-square rounded-full absolute top-0 -translate-y-1/2 -left-2.5" />
             <h3 class="text-xs lg:text-base font-medium text-custom-blue">Sign Up to Be Notified for Upcoming Events</h3>
             <p class="text-[9px] lg:text-[13px] leading-5 mt-4">Stay connected and be the first to know about our exciting upcoming
                 events!

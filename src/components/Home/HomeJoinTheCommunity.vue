@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class="mt-[66px]nlg:mt-0 lg:max-w-[493px]">
+        <div class="mt-[66px] lg:mt-0 lg:max-w-[493px]">
             <h3 class="text-[22px] lg:text-[24px] font-semibold text-custom-blue">Why Join Us ?</h3>
             <div class="mt-[55px] lg:mt-10 grid grid-cols-2 gap-x-8 lg:gap-x-9 gap-y-7 lg:gap-y-10">
                 <div v-for="n in 4" :key="n" class="border-[2px] border-custom-blue rounded-[5px] px-3 py-4 lg:px-6 lg:py-8">
