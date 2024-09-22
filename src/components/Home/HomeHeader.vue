@@ -25,7 +25,7 @@
         </section>
         <section class="mt-[45px]  px-4 lg:mt-0 lg:px-0 lg:w-1/2">
             <div class="relative">
-                <div class="absolute bottom-0 right-3.5 h-fit">
+                <div class="hidden lg:block absolute bottom-0 right-3.5 h-fit">
                     <NuxtLink class="flex items-center gap-1 font-medium border-b-[1px] border-b-custom-blue py-1"><span
                             class="text-[7px] lg:text-base text-custom-blue font-medium">Building a brighter future
                         </span>
@@ -37,7 +37,8 @@
 
                     </NuxtLink>
                 </div>
-                <img src="@/assets/images/home_header.jpg" class="w-full lg:hidden" />
+                <!-- <img src="@/assets/images/home_header.jpg" class="w-full lg:hidden" /> -->
+                <img src="@/assets/images/home/HomeHeaderGroup.png" class="w-full lg:hidden" />
                 <img src="@/assets/images/large-home-header.png" class="w-full hidden lg:block" />
             </div>
             <p class="lg:hidden text-[13px] lg:text-sm font-medium leading-6 mt-10 line-clamp-3"><span
@@ -48,5 +49,4 @@
         </section>
         <HomeTestimonial class="mt-[71px] lg:hidden" />
     </header>
-
 </template>

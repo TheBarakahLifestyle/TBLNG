@@ -133,7 +133,7 @@ const ourValues = [
                         </svg>
 
                     </div>
-                    <img src="@/assets/images/about/AboutUsVision.png" class="object-cover" />
+                    <img src="@/assets/images/about/AboutUsVision.png" class="object-cover  bg-custom-blue/60" />
                 </div>
                 <div>
                     <h3 class="text-[22px] font-merriweather">Our Values</h3>
