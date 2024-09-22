@@ -1,0 +1,34 @@
+<template>
+    <div>
+        <section class="px-4">
+            <div
+                class="mx-auto max-w-container flex flex-col lg:flex-row lg:justify-between lg:items-center lg:gap-x-10 lg:px-[28px] lg:py-5 lg-bg-white lg:shadow-[1px_1px_5px_1px_#0000001A]">
+                <!-- image here -->
+                <div class="hidden lg:block rounded-[5px] relative overflow-clip grow max-w-[574px]">
+                    <div class="absolute inset-0 bg-custom-blue/40" />
+                    <img src="@/assets/images/contact/ContactUs.png" class="object-cover -z-10 w-full" />
+                </div>
+                <div class="lg:max-w-[436px]">
+                    <h1 class="text-[22px] lg:text-[28px] text-custom-blue font-merriweather">Connect With Us</h1>
+                    <p class="mt-5 lg:mt-[30px] leading-6 text-xs lg:text-sm">We look forward to hearing from you and
+                        collaborating on impactful
+                        projects!</p>
+                    <form @submit.prevent class="flex flex-col w-full gap-y-12 lg:gap-y-11 mt-10 lg:mt-12">
+                        <div class="flex flex-col gap-y-6 lg:gap-y-[30px]">
+                            <input placeholder="Name" required
+                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]" />
+                            <input placeholder="Email Address" required
+                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]" />
+                            <input placeholder="Phone No" required
+                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]" />
+                            <textarea placeholder="Message" required rows="4"
+                                class="outline-none w-full px-6 py-4 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]"></textarea>
+                        </div>
+                        <button
+                            class="font-roboto font-medium text-white rounded-[5px] bg-custom-blue px-[18px] h-7 text-center w-fit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>
