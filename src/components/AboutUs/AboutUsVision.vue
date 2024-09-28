@@ -35,7 +35,8 @@ const ourValues = [
             <div class="relative w-fit h-fit lg:max-w-[460px]">
                 <div class=" absolute w-full h-full  inset-0 px-4 py-5 text-white lg:px-[42px] lg:py-[62px] ">
                     <p class="text-[22px] lg:text-[32px] font-merriweather">Our Vision</p>
-                    <p class="mt-[30px] text-sm font-medium leading-10 lg:leading-[42px] lg:text-base">To enrich humanity and create a
+                    <p class="mt-[30px] text-sm font-medium leading-10 lg:leading-[42px] lg:text-base">To enrich
+                        humanity and create a
                         community
                         where
                         Muslims, especially women, are empowered through faith -based education, inspiration, and
@@ -58,7 +59,8 @@ const ourValues = [
             <div class="lg:max-w-[620px]">
                 <h3 class="text-[22px] font-merriweather lg:text-[32px]">Our Values</h3>
                 <div class="grid grid-cols-2 gap-x-3 gap-y-[14px] mt-6 lg:mt-[54px] lg:grid-cols-3 lg:gap-10">
-                    <div class="bg-[#F4F4F44D] rounded-[5px] px-[18px] py-4 lg:px-6" v-for="(value, index) in ourValues">
+                    <div class="bg-[#F4F4F44D] rounded-[5px] px-[18px] py-4 lg:px-6"
+                        v-for="(value, index) in ourValues">
                         <p class="text-xs font-medium lg:text-lg">{{ value.title }}</p>
                         <p class="text-[9px] lg:text-[10px] leading-6 mt-[11px] lg:mt-4">{{ value.text }}</p>
                     </div>
