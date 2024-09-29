@@ -18,10 +18,24 @@
                 </div>
             </div>
             <div class="mt-[30px] grid grid-cols-2 gap-x-5 gap-y-9">
-                <div class="rounded-[5px] overflow-clip">
-                    <img src="@/assets/images/initiative/initiative-project-1.png" />
-                    <div class="">do what neeeds to be done</div>
-                </div>
+                <InitiativeProjectCard donation-purpose="Food Drive Initaitive" @donate="">
+                    <img src="@/assets/images/initiative/initiative-project-1.png" class="w-full h-full object-cover" />
+                </InitiativeProjectCard>
+                <InitiativeProjectCard donation-purpose="Widow Skill Program" @donate="">
+                    <img src="@/assets/images/initiative/initiative-project-2.png" class="w-full h-full object-cover" />
+                </InitiativeProjectCard>
+                <InitiativeProjectCard donation-purpose="Thrive Symposium" @donate="">
+                    <img src="@/assets/images/initiative/initiative-project-3.png" class="w-full h-full object-cover" />
+                </InitiativeProjectCard>
+                <InitiativeProjectCard donation-purpose="Water Projects" @donate="">
+                    <img src="@/assets/images/initiative/initiative-project-4.png" class="w-full h-full object-cover" />
+                </InitiativeProjectCard>
+                <InitiativeProjectCard donation-purpose="Uni-Student Food" @donate="">
+                    <img src="@/assets/images/initiative/initiative-project-5.png" class="w-full h-full object-cover" />
+                </InitiativeProjectCard>
+                <InitiativeProjectCard donation-purpose="Medical Outreaches" @donate="">
+                    <img src="@/assets/images/initiative/initiative-project-6.png" class="w-full h-full object-cover" />
+                </InitiativeProjectCard>
             </div>
         </div>
     </section>
