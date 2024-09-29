@@ -1,24 +1,46 @@
+<script setup lang="ts">
+import PaystackPop from '@paystack/inline-js';
+
+const paystackInstance = new PaystackPop();
+
+const onSuccess = transaction => alert(`Succesful! Ref: ${transaction.reference}`);
+
+
+function makeDonation() {
+    paystackInstance.newTransaction({
+        key: 'pk_test_9223084abca9811b114e07f58c1930c22e35d14c',
+        email: 'jimohsodiq301@gmail.com',
+        amount: 10000, // in kobo
+        onSuccess
+    });
+}
+
+/**
+ * phone, email, firstname, amount, lastname
+ */
+</script>
+
 <template>
-    <section class="px-4 mt-[53px]">
+    <section class="px-4 mt-[53px] lg:mt-[135px]">
         <div class="mx-auto max-w-container">
-            <div class="text-xs flex flex-col gap-y-[25px]">
-                <div>
+            <div class="text-xs flex flex-col gap-y-[25px] lg:flex-row lg:justify-between">
+                <div class="lg:max-w-[435px]">
                     <h2 class="text-[22px] font-merriweather">Projects</h2>
                     <p class="mt-[30px] font-medium leading-7">We are committed to uplifting communities through
                         meaningful projects that inspire positive change.</p>
                 </div>
-                <div>
+                <div class="lg:max-w-[635px] ">
                     <p class=" font-medium leading-7">This projects aims to provide essential resources and
                         support
                         to those in need, focusing on
                         education, health, and sustainable development.</p>
                     <button
-                        class="rounded-[5px] mt-[33px] lg:mt-14 bg-custom-yellow text-white font-roboto font-medium  h-[30px] lg:h-10 px-4 lg:px-[22px]">Join
+                        class="rounded-[5px] mt-[33px] lg:mt-10 bg-custom-yellow text-white font-roboto font-medium  h-[30px] lg:h-10 px-4 lg:px-[22px]">Join
                         Us</button>
                 </div>
             </div>
-            <div class="mt-[30px] grid grid-cols-2 gap-x-5 gap-y-9">
-                <InitiativeProjectCard donation-purpose="Food Drive Initaitive" @donate="">
+            <div class="mt-[30px] lg:mt-[116px] grid grid-cols-2 gap-x-5 gap-y-9 lg:grid-cols-3 lg:gap-x-[109px] lg:gap-y-[83px]">
+                <InitiativeProjectCard donation-purpose="Food Drive Initaitive" @donate="makeDonation">
                     <img src="@/assets/images/initiative/initiative-project-1.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
                 <InitiativeProjectCard donation-purpose="Widow Skill Program" @donate="">

@@ -4,4 +4,4 @@
         <InitiativeMission />
         <InitiativeProjects />
     </div>
-</template>
+</template>initiative
