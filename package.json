@@ -25,6 +25,7 @@
     "@vueuse/nuxt": "^11.0.3",
     "nanoid": "^5.0.7",
     "nuxt": "^3.13.0",
+    "nuxt-security": "^2.0.0",
     "vue": "latest",
     "vue-router": "latest"
   }

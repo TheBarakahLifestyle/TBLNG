@@ -6,7 +6,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   srcDir: "src",
-  modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "@formkit/auto-animate"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
+    "@formkit/auto-animate",
+    "nuxt-security",
+  ],
   vite: {
     plugins: [
       nodePolyfills({
@@ -22,6 +27,15 @@ export default defineNuxtConfig({
       proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**" },
     },
   },
+  security: {
+    corsHandler: {
+      origin: "https://the-barakah-lifestyle-ng.ghost.io",
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+      preflight: {
+        statusCode: 204
+      },
+    },
+  }
 });
 
 // ghost/api/admin/members/
