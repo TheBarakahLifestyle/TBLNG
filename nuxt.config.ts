@@ -4,7 +4,6 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  ssr: true,
   srcDir: "src",
   modules: [
     "@nuxtjs/tailwindcss",
@@ -29,13 +28,21 @@ export default defineNuxtConfig({
   },
   security: {
     corsHandler: {
-      origin: "https://the-barakah-lifestyle-ng.ghost.io",
-      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+      origin: [
+        "https://the-barakah-lifestyle-ng.ghost.io",
+        "https://blog.tblt.com.ng",
+      ],
       preflight: {
-        statusCode: 204
+        statusCode: 204,
+      },
+      allowHeaders: "*",
+    },
+    headers: {
+      contentSecurityPolicy: {
+        "img-src": false,
       },
     },
-  }
+  },
 });
 
 // ghost/api/admin/members/
