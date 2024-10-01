@@ -34,12 +34,13 @@ function makeDonation() {
                         support
                         to those in need, focusing on
                         education, health, and sustainable development.</p>
-                    <button
-                        class="rounded-[5px] mt-[33px] lg:mt-10 bg-custom-yellow text-white font-roboto font-medium  h-[30px] lg:h-10 px-4 lg:px-[22px]">Join
-                        Us</button>
+                    <a href="https://selar.co/g844y3" target="_blank"
+                        class="rounded-[5px] mt-[33px] lg:mt-10 bg-custom-yellow text-white font-roboto font-medium  h-[30px] lg:h-10 px-4 lg:px-[22px] flex items-center justify-center w-fit">Join
+                        Us</a>
                 </div>
             </div>
-            <div class="mt-[30px] lg:mt-[116px] grid grid-cols-2 gap-x-5 gap-y-9 lg:grid-cols-3 lg:gap-x-[109px] lg:gap-y-[83px]">
+            <div
+                class="mt-[30px] lg:mt-[116px] grid grid-cols-2 gap-x-5 gap-y-9 lg:grid-cols-3 lg:gap-x-[109px] lg:gap-y-[83px]">
                 <InitiativeProjectCard donation-purpose="Food Drive Initaitive" @donate="makeDonation">
                     <img src="@/assets/images/initiative/initiative-project-1.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { email, name, pending, joinUs } = useJoinUs()
+</script>
+
 <template>
     <header class="mx-auto max-w-container flex flex-col lg:flex-row lg:items-end lg:justify-between lg:gap-[130px]">
         <section class="lg:w-1/2">
@@ -13,12 +17,13 @@
                         mission</span> is to create a safe and nurturing space where
                     sisters can
                     come together to learn, share and grow in their faith.</p>
-                <form @submit.prevent class="flex items-center gap-[30px] mt-[35px]">
-                    <input class="grow h-10 rounded-[5px] px-4 text-xs outline-none drop-shadow-lg drop" required
+                <form @submit.prevent="joinUs" class="flex items-center gap-[30px] mt-[35px]">
+                    <input v-model.trim="email" required
+                        class="grow h-10 rounded-[5px] px-4 text-xs lg:text-sm outline-none shadow-[1px_1px_5px_2px_#00000026]"
                         type="email" placeholder="Enter your email" />
-                    <button
-                        class="shrink-0 inline-block rounded-[5px] px-[14px] h-8 bg-custom-blue text-sm text-white font-roboto font-medium">Join
-                        Us</button>
+                    <button :disabled="pending"
+                        class="shrink-0 inline-block rounded-[5px] px-[14px] h-8 bg-custom-blue text-sm text-white font-roboto font-medium">{{
+                            pending ? "loading..." : "Join Us" }}</button>
                 </form>
             </div>
             <HomeTestimonial class="mt-[71px] lg:mt-[127px] hidden lg:block lg:max-w-[475px]" />

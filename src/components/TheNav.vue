@@ -51,9 +51,9 @@ function handleJoinUs() {
                     link.label }}</NuxtLink>
             </div>
 
-            <button
+            <a href="https://selar.co/g844y3" target="_blank"
                 class="hidden lg:inline-block rounded-[5px] px-[21px] py-[9px] bg-custom-yellow text-white font-roboto font-medium">Join
-                Us</button>
+                Us</a>
 
             <!-- hamburger -->
             <button class="lg:hidden" @click="screenState.showMobileMenu = true">
