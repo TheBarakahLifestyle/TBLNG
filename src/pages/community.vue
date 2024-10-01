@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { email, name, pending, joinUs } = useJoinUs()
+</script>
+
 <template>
     <div>
         <div class="mx-auto max-w-container">
@@ -87,12 +91,13 @@
                             holistic
                             well-being and
                             positive impact.</p>
-                        <form @submit.prevent class="flex items-center gap-[30px] mt-[30px] lg:mt-11">
-                            <input class="grow h-10 rounded-[5px] px-4 text-xs outline-none ring-[2px] ring-custom-blue"
+                        <form @submit.prevent="joinUs" class="flex items-center gap-[30px] mt-[30px] lg:mt-11">
+                            <input v-model.trim="email"
+                                class="grow h-10 rounded-[5px] px-4 text-xs lg:text-sm outline-none ring-[2px] ring-custom-blue"
                                 required type="email" placeholder="Enter your email" />
                             <button
-                                class="shrink-0 inline-block rounded-[5px] px-[14px] h-8 bg-custom-blue text-sm text-white font-roboto font-medium">Join
-                                Us</button>
+                                class="shrink-0 inline-block rounded-[5px] px-[14px] h-8 bg-custom-blue text-sm text-white font-roboto font-medium">{{
+                                    pending ? "loading..." : "Join Us" }}</button>
                         </form>
                     </div>
                 </div>
