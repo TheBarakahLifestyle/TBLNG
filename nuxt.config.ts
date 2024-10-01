@@ -21,11 +21,11 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  routeRules: {
-    "/ghost/api/**": {
-      proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**" },
-    },
-  },
+  // routeRules: {
+  //   "/ghost/api/**": {
+  //     proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**" },
+  //   },
+  // },
   security: {
     corsHandler: {
       origin: [
@@ -38,9 +38,8 @@ export default defineNuxtConfig({
       allowHeaders: "*",
     },
     headers: {
-      contentSecurityPolicy: {
-        "img-src": false,
-      },
+      contentSecurityPolicy: false,
+      crossOriginResourcePolicy: "cross-origin"
     },
   },
 });
