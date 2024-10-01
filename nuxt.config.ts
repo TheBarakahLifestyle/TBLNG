@@ -17,4 +17,11 @@ export default defineNuxtConfig({
       }),
     ],
   },
+  routeRules: {
+    '/ghost/api/**': {
+      proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**"}
+    }
+  }
 });
+
+// ghost/api/admin/members/
