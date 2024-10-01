@@ -1,5 +1,8 @@
-<template>
+<script setup lang="ts">
+const { email, name, pending, joinUs } = useJoinUs()
+</script>
 
+<template>
     <header class="mx-auto max-w-container flex flex-col lg:flex-row lg:justify-between lg:gap-[130px]">
         <section class="lg:flex-col lg:justify-between lg:grow lg:flex">
             <div class="px-4">
@@ -10,12 +13,13 @@
 
                 <p class="text-[11px] lg:text-sm font-medium leading-6 mt-5">Become a part of a
                     community that values holistic well- being and positive impact.</p>
-                <form @submit.prevent class="flex items-center gap-[30px] mt-[35px]">
-                    <input class="grow h-10 rounded-[5px] px-4 text-xs outline-none ring-[2px] ring-custom-blue"
-                        required type="email" placeholder="Enter your email" />
-                    <button
-                        class="shrink-0 inline-block rounded-[5px] px-[14px] h-8 bg-custom-blue text-sm text-white font-roboto font-medium">Join
-                        Us</button>
+                <form @submit.prevent="joinUs" class="flex items-center gap-[30px] mt-[35px]">
+                    <input v-model.trim="email"
+                        class="grow h-10 rounded-[5px] px-4 text-xs lg:text-sm outline-none ring-[2px] ring-custom-blue" required
+                        type="email" placeholder="Enter your email" />
+                    <button :disabled="pending"
+                        class="shrink-0 inline-block rounded-[5px] px-[14px] h-8 bg-custom-blue text-sm text-white font-roboto font-medium">{{
+                            pending ? "loading..." : "Join Us" }}</button>
                 </form>
             </div>
             <AboutUsSpiritualGrowth class="mt-[71px] lg:mt-[127px] hidden lg:block lg:max-w-[475px] px-4" />
@@ -25,7 +29,9 @@
                 <img src="@/assets/images/about/AboutUsHeaderOne.png" class="w-full" />
                 <img src="@/assets/images/about/AboutUsHeaderOneOverlay.png" class="w-full absolute inset-0" />
 
-                <p class="mt-[53px] text-xs font-medium leading-6 lg:mt-0 lg:absolute bottom-0 left-0 lg:px-[50px] lg:pb-10 lg:max-w-[400px] lg:text-base  lg:text-white">A Muslim Lifestyle
+                <p
+                    class="mt-[53px] text-xs font-medium leading-6 lg:mt-0 lg:absolute bottom-0 left-0 lg:px-[50px] lg:pb-10 lg:max-w-[400px] lg:text-base  lg:text-white">
+                    A Muslim Lifestyle
                     Platform driven by faith
                     to serve
                     humanity by educating, Inspiring and empowering
