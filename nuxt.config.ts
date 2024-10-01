@@ -4,7 +4,7 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  ssr:true,
+  ssr: true,
   srcDir: "src",
   modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "@formkit/auto-animate"],
   vite: {
@@ -18,10 +18,10 @@ export default defineNuxtConfig({
     ],
   },
   routeRules: {
-    '/ghost/api/**': {
-      proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**"}
-    }
-  }
+    "/ghost/api/**": {
+      proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**" },
+    },
+  },
 });
 
 // ghost/api/admin/members/
