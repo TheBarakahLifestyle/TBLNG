@@ -11,13 +11,22 @@ export function useJoinUs() {
   const name = ref("");
   const pending = ref(false);
 
+  // const { data, execute, status } = await useFetch("/api/join", {
+  //   method: "POST",
+  //   immediate: false,
+  //   body: {
+  //     email: "jimohsodiq301@gmail.com",
+  //     name: "Jimoh Sodiq"
+  //   }
+  // })
+
   async function joinUs() {
     try {
       pending.value = true;
       // const res = await api.members.add({ email: email.value });
-      const res = await api.members.add({
-        email: email.value,
-        name: name.value,
+      const res = await $fetch("/api/join", {
+        method: "POST",
+        body: { email: email.value, name: name.value },
       });
       if (res.success) {
         useToast().success("Success", "You have been added successfully");

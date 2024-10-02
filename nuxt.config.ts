@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "@formkit/auto-animate",
-    "nuxt-security",
+    // "nuxt-security",
   ],
   vite: {
     plugins: [
@@ -26,22 +26,21 @@ export default defineNuxtConfig({
   //     proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**" },
   //   },
   // },
-  security: {
-    corsHandler: {
-      origin: [
-        "https://the-barakah-lifestyle-ng.ghost.io",
-        "https://blog.tblt.com.ng",
-      ],
-      preflight: {
-        statusCode: 204,
-      },
-      allowHeaders: "*",
-    },
-    headers: {
-      contentSecurityPolicy: false,
-      crossOriginResourcePolicy: "cross-origin"
-    },
-  },
+  // security: {
+  //   corsHandler: {
+  //     origin: "*",
+  //     preflight: {
+  //       statusCode: 204,
+  //     },
+  //     allowHeaders: "*",
+  //     exposeHeaders: "*"
+  //   },
+  //   headers: {
+  //     contentSecurityPolicy: false,
+  //     crossOriginResourcePolicy: "cross-origin",
+  //     xXSSProtection: false
+  //   },
+  // },
 });
 
 // ghost/api/admin/members/
