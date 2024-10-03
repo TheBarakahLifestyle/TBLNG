@@ -1,19 +1,12 @@
 <script setup lang="ts">
-import PaystackPop from '@paystack/inline-js';
+const projectPurpose = ref("")
+const showProjectDonationForm = ref(false)
 
-const paystackInstance = new PaystackPop();
-
-const onSuccess = transaction => alert(`Succesful! Ref: ${transaction.reference}`);
-
-
-function makeDonation() {
-    paystackInstance.newTransaction({
-        key: 'pk_test_9223084abca9811b114e07f58c1930c22e35d14c',
-        email: 'jimohsodiq301@gmail.com',
-        amount: 10000, // in kobo
-        onSuccess
-    });
+function openProjectDonationForm(purpose: string) {
+    projectPurpose.value = purpose
+    showProjectDonationForm.value = true
 }
+
 
 /**
  * phone, email, firstname, amount, lastname
@@ -41,25 +34,35 @@ function makeDonation() {
             </div>
             <div
                 class="mt-[30px] lg:mt-[116px] grid grid-cols-2 gap-x-5 gap-y-9 lg:grid-cols-3 lg:gap-x-[109px] lg:gap-y-[83px]">
-                <InitiativeProjectCard donation-purpose="Food Drive Initaitive" @donate="makeDonation">
+                <InitiativeProjectCard donation-purpose="Food Drive Initaitive"
+                    @donate="openProjectDonationForm('Food Drive Initaitive')">
                     <img src="@/assets/images/initiative/initiative-project-1.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
-                <InitiativeProjectCard donation-purpose="Widow Skill Program" @donate="">
+                <InitiativeProjectCard donation-purpose="Widow Skill Program"
+                    @donate="openProjectDonationForm('Widow Skill Program')">
                     <img src="@/assets/images/initiative/initiative-project-2.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
-                <InitiativeProjectCard donation-purpose="Thrive Symposium" @donate="">
+                <InitiativeProjectCard donation-purpose="Thrive Symposium"
+                    @donate="openProjectDonationForm('Thrive Symposium')">
                     <img src="@/assets/images/initiative/initiative-project-3.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
-                <InitiativeProjectCard donation-purpose="Water Projects" @donate="">
+                <InitiativeProjectCard donation-purpose="Water Projects"
+                    @donate="openProjectDonationForm('Water Projects')">
                     <img src="@/assets/images/initiative/initiative-project-4.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
-                <InitiativeProjectCard donation-purpose="Uni-Student Food" @donate="">
+                <InitiativeProjectCard donation-purpose="Uni-Student Food"
+                    @donate="openProjectDonationForm('Uni-Student Food')">
                     <img src="@/assets/images/initiative/initiative-project-5.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
-                <InitiativeProjectCard donation-purpose="Medical Outreaches" @donate="">
+                <InitiativeProjectCard donation-purpose="Medical Outreaches"
+                    @donate="openProjectDonationForm('Medical Outreaches')">
                     <img src="@/assets/images/initiative/initiative-project-6.png" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
             </div>
         </div>
+        <TheModal v-if="showProjectDonationForm" modalContentClass="p-0">
+            <InitiativeDonationForm :projectPurpose="projectPurpose" @close="showProjectDonationForm = false"
+                :show-as-modal="true" />
+        </TheModal>
     </section>
 </template>

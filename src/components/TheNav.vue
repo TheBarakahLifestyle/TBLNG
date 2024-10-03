@@ -40,6 +40,14 @@ function handleJoinUs() {
     screenState.showMobileMenu = false
 }
 
+watchEffect(() => {
+    if (screenState.showMobileMenu) {
+        document?.body.classList.add('overflow-hidden')
+    } else {
+        document?.body.classList.remove('overflow-hidden')
+    }
+})
+
 </script>
 
 <template>

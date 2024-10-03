@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { email, name, pending, joinUs, phone } = useJoinUs()
+</script>
+
 <template>
     <header class="px-4">
         <div
@@ -11,18 +15,19 @@
                     offerings by
                     signing up for
                     our newsletter.</p>
-                <form @submit.prevent class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
+                <form @submit.prevent="joinUs" class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
                     <div class="flex flex-col w-full gap-y-8">
-                        <input placeholder="Name" type="text"
-                            class="px-4 outline-none h-[30px] lg:h-10 text-xs w-full bg-white/30 rounded-[5px]" />
-                        <input placeholder="Email Address" type="email"
-                            class="px-4 outline-none h-[30px] lg:h-10 text-xs w-full bg-white/30 rounded-[5px]" />
-                        <input placeholder="Phone Number" type="text"
-                            class="px-4 outline-none h-[30px] lg:h-10 text-xs w-full bg-white/30 rounded-[5px]" />
+                        <input v-model.trim="name" placeholder="Name" type="text" required
+                            class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
+                        <input v-model.trim="email" placeholder="Email Address" type="email" required
+                            class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
+                        <input v-model.trim="phone" placeholder="Phone Number" type="text"
+                            class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
                     </div>
-                    <button
-                        class="h-8 lg:h-[38px] rounded-[5px] px-4 text-sm lg:text-base font-roboto text-custom-blue bg-white text-center w-fit font-medium">Join
-                        Us</button>
+                    <button :disabled="pending"
+                        class="h-8 lg:h-[38px] rounded-[5px] px-4 text-sm lg:text-base font-roboto text-custom-blue bg-white text-center w-fit font-medium">{{
+                            pending ? "loading..." : "Join Us"
+                        }}</button>
                 </form>
             </div>
         </div>
