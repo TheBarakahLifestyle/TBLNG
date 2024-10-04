@@ -67,11 +67,11 @@ async function submitForm() {
                     <form @submit.prevent="submitForm" class="flex flex-col w-full gap-y-12 lg:gap-y-11 mt-10 lg:mt-12">
                         <div class="flex flex-col gap-y-6 lg:gap-y-[30px]">
                             <input v-model="form.name" placeholder="Name" required
-                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]" />
+                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-sm rounded-[5px]" />
                             <input v-model="form.email" type="email" placeholder="Email Address" required
-                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]" />
+                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-sm rounded-[5px]" />
                             <input v-model="form.phone" placeholder="Phone No"
-                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]" />
+                                class="outline-none w-full h-10 lg:h-12 px-6 bg-[#F4F4F4] text-[10px] lg:text-sm rounded-[5px]" />
                             <textarea v-model="form.message" placeholder="Message" required rows="4"
                                 class="outline-none w-full px-6 py-4 bg-[#F4F4F4] text-[10px] lg:text-xs rounded-[5px]"></textarea>
                         </div>

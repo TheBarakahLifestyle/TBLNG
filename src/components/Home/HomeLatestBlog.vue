@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import GhostContentAPI, { type PostsOrPages } from '@tryghost/content-api'
+const runtimeConfig  = useRuntimeConfig()
 
 const api = new GhostContentAPI({
     url: 'https://the-barakah-lifestyle-ng.ghost.io',
-    key: 'cb8c634fd302e8514841747317',
+    key: runtimeConfig.public.ghostClientKey,
     version: "v5.0"
 });
 
@@ -49,12 +50,12 @@ onMounted(() => {
                                 lives filled with purpose
                                 and spiritual fulfillment.</p>
                         </div>
-                        <div class="relative w-full h-[200%] min-h-[225px] lg:h-[382px]">
+                        <a :href="post.url" target="_blank" class="relative w-full h-[200%] min-h-[225px] lg:h-[382px]">
                             <img v-if="post.feature_image" :src="post.feature_image"
                                 class="rounded-[10px] w-full h-full lg:h-[382px] object-cover" />
                             <img v-else src="@/assets/images/blog-image.jpg"
                                 class="rounded-[10px] w-full h-[200%] lg:h-[382px] object-cover" />
-                            <a :href="post.url" target="_blank"
+                            <div
                                 class="rounded-full bg-[#D9D9D9]/90 w-7 h-7 lg:w-[46px] lg:h-[46px] shrink-0 absolute bottom-4 right-4 grid place-items-center">
                                 <svg class="w-[13px] h-[13px] lg:w-[22px] lg:h-[22px]" viewBox="0 0 13 13" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -62,8 +63,8 @@ onMounted(() => {
                                         d="M2.84291 6.50023C2.84291 6.72456 3.02462 6.90648 3.24916 6.90648H8.99142L6.97524 9.93113C6.85069 10.1178 6.90106 10.3701 7.0879 10.4945C7.15736 10.5407 7.23549 10.5627 7.31288 10.5627C7.44418 10.5627 7.57312 10.4992 7.65128 10.3818L10.2391 6.50023L7.65128 2.61863C7.52709 2.43176 7.27558 2.38118 7.08794 2.50598C6.90106 2.63037 6.85069 2.88266 6.97528 3.06933L8.99142 6.09398H3.24916C3.02462 6.09398 2.84291 6.2759 2.84291 6.50023Z"
                                         fill="#313131" />
                                 </svg>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

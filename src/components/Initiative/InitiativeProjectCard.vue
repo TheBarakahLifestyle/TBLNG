@@ -13,7 +13,7 @@ const props = defineProps<{
     <div class="rounded-[5px] overflow-clip relative">
         <slot />
         <div
-            class="flex w-[90%] lg:w-[80%] rounded-[2px] lg:rounded-[5px] overflow-clip h-[25px] lg:h-[53px] bg-red-500 absolute bottom-4 left-[50%] -translate-x-[50%]">
+            class="flex w-[90%] lg:w-[80%] rounded-[2px] lg:rounded-[5px] overflow-clip h-[25px] lg:h-[53px] absolute bottom-4 left-[50%] -translate-x-[50%]">
             <div
                 class="flex-wrap h-full bg-white font-semibold text-[8px] flex items-center justify-center grow px-1 lg:px-2.5 lg:text-sm">
                 {{ donationPurpose }}</div><button

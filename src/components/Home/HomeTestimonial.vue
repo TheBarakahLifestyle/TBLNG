@@ -6,16 +6,20 @@ const testimonials = [
         text: "Alhamdulilah, it is just what my soul needs. I’m more conscious of Allah in my day to day life because of the constant reminders from the reflections.",
     },
     {
-        by: "Sodiq",
-        text: "Alhamdulilah, for everything",
+        by: "Amina",
+        text: "My experience so far has been great.I will say it’s a positive improvement and encouragement in all aspects of my Deen.What inspires me most is the collective effort and teamwork.I thank ALLAH SWT for guiding me to this community.",
     },
     {
-        by: "Aisha",
-        text: "Alhamdulilah, it is just what my soul needs. I’m more conscious of Allah in my day to day life because of the constant reminders from the reflections.",
+        by: "Nasimah",
+        text: "I am a better Muslimah in the sense that I can always reflect on Allah's words even without reading them. I can remember a particular verse and refer to it in a conversation which makes me proud of myself. Alhamdulillah.",
+    },
+    {
+        by: "Asma'u",
+        text: "I had a beautiful first experience... My heart swelled with joy seeing as everyone was up and doing just for the sake of our lord. May Allah reunite us all and May He enrich us all more in all ways to be able to give back to the Ummah of the Rasul."
     }
 ]
 
-const testimonyToShowIndex = ref(0)
+const testimonyToShowIndex = ref(Math.floor(Math.random() * testimonials.length))
 
 function handleNextTestimony() {
     const next = testimonyToShowIndex.value + 1

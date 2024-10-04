@@ -2,6 +2,8 @@
 import PaystackPop from '@paystack/inline-js';
 import { warn } from 'vue';
 
+const runtimeConfig = useRuntimeConfig()
+
 const paystackInstance = new PaystackPop();
 
 const props = defineProps<{
@@ -32,7 +34,7 @@ function onCancel() {
 
 function makeDonation() {
     paystackInstance.newTransaction({
-        key: 'pk_test_9223084abca9811b114e07f58c1930c22e35d14c',
+        key: runtimeConfig.public.paystackKey,
         email: form.email,
         amount: +form.amount * 100, // in kobo * 100 = naira
         firstName: form.firstName,

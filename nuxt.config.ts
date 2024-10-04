@@ -5,12 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   srcDir: "src",
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@vueuse/nuxt", // "nuxt-security",
-    "@formkit/auto-animate",
-    "nuxt-vuefire",
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "@formkit/auto-animate"],
   vite: {
     plugins: [
       nodePolyfills({
@@ -21,37 +16,11 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  vuefire: {
-    config: {
-      apiKey: "AIzaSyAh5oZYIiWDVUHrvgIqGl9gr2wV_p4q0tQ",
-      authDomain: "tblt-e31f8.firebaseapp.com",
-      projectId: "tblt-e31f8",
-      appId: "1:134173484559:web:f84d3af5a255256de7657a",
-      storageBucket: "tblt-e31f8.appspot.com",
-      messagingSenderId: "134173484559",
-      // there could be other properties depending on the project
+  runtimeConfig: {
+    ghostAdminKey: process.env.GHOST_ADMIN_KEY,
+    public: {
+      paystackKey: process.env.PAYSTACK_KEY,
+      ghostClientKey: process.env.GHOST_CLIENT_KEY,
     },
   },
-  // routeRules: {
-  //   "/ghost/api/**": {
-  //     proxy: { to: "https://the-barakah-lifestyle-ng.ghost.io/ghost/api/**" },
-  //   },
-  // },
-  // security: {
-  //   corsHandler: {
-  //     origin: "*",
-  //     preflight: {
-  //       statusCode: 204,
-  //     },
-  //     allowHeaders: "*",
-  //     exposeHeaders: "*"
-  //   },
-  //   headers: {
-  //     contentSecurityPolicy: false,
-  //     crossOriginResourcePolicy: "cross-origin",
-  //     xXSSProtection: false
-  //   },
-  // },
 });
-
-// ghost/api/admin/members/
