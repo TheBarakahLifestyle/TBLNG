@@ -17,10 +17,10 @@ export default defineNuxtConfig({
     ],
   },
   runtimeConfig: {
-    ghostAdminKey: process.env.GHOST_ADMIN_KEY,
+    ghostAdminKey: process.env.VITE_GHOST_ADMIN_KEY,
     public: {
-      paystackKey: process.env.PAYSTACK_KEY,
-      ghostClientKey: process.env.GHOST_CLIENT_KEY,
+      paystackKey: process.env.VITE_PAYSTACK_KEY,
+      ghostClientKey: process.env.VITE_GHOST_CLIENT_KEY,
     },
   },
 });
