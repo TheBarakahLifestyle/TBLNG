@@ -17,10 +17,10 @@ const navLinks = [
         label: "Events",
         to: "/events"
     },
-    {
-        label: "Resources",
-        to: "/resources"
-    },
+    // {
+    //     label: "Resources",
+    //     to: "/resources"
+    // },
     {
         label: "Initiative",
         to: "/initiative"
@@ -91,9 +91,9 @@ watchEffect(() => {
             <NuxtLink @click="screenState.showMobileMenu = false" exactActiveClass="navlink"
                 v-for="(link, index) in navLinks" :key="index" :to="link.to">{{
                     link.label }}</NuxtLink>
-            <button @click="handleJoinUs"
+            <a href="https://selar.co/g844y3" target="_blank" @click="handleJoinUs"
                 class="mt-4 rounded-[5px] px-[21px] py-[9px] bg-custom-yellow text-white font-roboto font-medium">Join
-                Us</button>
+                Us</a>
         </div>
     </div>
 </template>

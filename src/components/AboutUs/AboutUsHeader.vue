@@ -26,7 +26,7 @@ const { email, name, pending, joinUs } = useJoinUs()
         </section>
         <section class="mt-[45px]  px-4 lg:mt-0 lg:px-0 lg:w-2/3 lg:max-w-[660px]">
             <div class="relative">
-                <img src="@/assets/images/about/AboutUsHeaderOne.png" class="w-full" />
+                <img src="@/assets/images/about/AboutUsHeaderOne.jpg" class="w-full" />
                 <img src="@/assets/images/about/AboutUsHeaderOneOverlay.png" class="w-full absolute inset-0" />
 
                 <p

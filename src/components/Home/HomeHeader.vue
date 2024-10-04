@@ -44,9 +44,9 @@ const { email, name, pending, joinUs } = useJoinUs()
                     </NuxtLink>
                 </div>
                 <!-- <img src="@/assets/images/home_header.jpg" class="w-full lg:hidden" /> -->
-                <img src="@/assets/images/home/HomeHeaderGroup.png" class="w-full lg:hidden" />
+                <img src="@/assets/images/home/HomeHeaderGroup.jpg" class="w-full lg:hidden" />
                 <div class="w-full hidden lg:block relative select-none -z-10">
-                    <img src="@/assets/images/large-home-header.png" class="w-full" />
+                    <img src="@/assets/images/large-home-header.jpg" class="w-full" />
                     <img src="@/assets/images/home/HomeHeaderGroupLargeOverlay.png" class="w-full absolute inset-0" />
                 </div>
             </div>

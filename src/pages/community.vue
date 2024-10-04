@@ -7,7 +7,7 @@ const { email, name, pending, joinUs } = useJoinUs()
         <div class="mx-auto max-w-container">
             <div class="flex flex-col gap-y-[52px] lg:flex-row lg:items-end lg:gap-x-14">
                 <div class="px-4 lg:px-0 lg:w-[60%]">
-                    <img class="w-full" src="@/assets/images/community/Community.png" />
+                    <img class="w-full" src="@/assets/images/community/Community.jpg" />
                 </div>
                 <div class="pl-4 lg:p-0 lg:w-[40%]">
                     <h3 class="font-medium pr-0 lg:pr-0 lg:px-0 lg:text-[30px] lg:max-w-[318px]">UNITY in Faith, Growth
@@ -43,31 +43,31 @@ const { email, name, pending, joinUs } = useJoinUs()
                 <div
                     class="mt-[50px] lg:mt-[81px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-[30px] lg:gap-x-8 gap-y-11">
                     <div class="group rounded-[5px] overflow-clip relative">
-                        <img src="@/assets/images/community/quran.png" />
+                        <img src="@/assets/images/community/quran.jpg" />
                         <div
                             class="text-white lg:text-xl flex items-center justify-center px-2.5 bg-custom-yellow lg:group-even:bg-custom-blue lg:group-odd:bg-custom-yellow rounded-[5px] font-semibold h-10 absolute bottom-0 inset-x-0">
                             Qur'an</div>
                     </div>
                     <div class="group rounded-[5px] overflow-clip relative">
-                        <img src="@/assets/images/community/discussion.png" />
+                        <img src="@/assets/images/community/discussion.jpg" />
                         <div
                             class="text-white lg:text-xl flex items-center justify-center px-2.5 bg-custom-blue lg:group-even:bg-custom-blue lg:group-odd:bg-custom-yellow rounded-[5px] font-semibold h-10 absolute bottom-0 inset-x-0">
                             Discussion</div>
                     </div>
                     <div class="group rounded-[5px] overflow-clip relative">
-                        <img src="@/assets/images/community/tajweed.png" />
+                        <img src="@/assets/images/community/tajweed.jpg" />
                         <div
                             class="text-white lg:text-xl flex items-center justify-center px-2.5 bg-custom-blue lg:group-even:bg-custom-blue lg:group-odd:bg-custom-yellow rounded-[5px] font-semibold h-10 absolute bottom-0 inset-x-0">
                             Tajweed</div>
                     </div>
                     <div class="group rounded-[5px] overflow-clip relative">
-                        <img src="@/assets/images/community/hangout.png" />
+                        <img src="@/assets/images/community/hangout.jpg" />
                         <div
                             class="text-white lg:text-xl flex items-center justify-center px-2.5 bg-custom-yellow lg:group-even:bg-custom-blue lg:group-odd:bg-custom-yellow rounded-[5px] font-semibold h-10 absolute bottom-0 inset-x-0">
                             Hangouts</div>
                     </div>
                     <div class="group rounded-[5px] overflow-clip relative">
-                        <img src="@/assets/images/community/tafsir.png" />
+                        <img src="@/assets/images/community/tafsir.jpg" />
                         <div
                             class="text-white lg:text-xl flex items-center justify-center px-2.5 bg-custom-yellow lg:group-even:bg-custom-blue lg:group-odd:bg-custom-yellow rounded-[5px] font-semibold h-10 absolute bottom-0 inset-x-0">
                             Tafsir</div>

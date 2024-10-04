@@ -7,7 +7,7 @@ const { email, name, pending, joinUs, phone } = useJoinUs()
         <div
             class="mx-auto max-w-container h-fit relative lg:flex lg:items-center lg:justify-end lg:py-[50px] lg:px-[88px]">
             <img class="hidden lg:block lg:absolute inset-0 -z-10 h-full w-full object-cover"
-                src="@/assets/images/event/EventHeader.png" />
+                src="@/assets/images/event/EventHeader.jpg" />
             <div
                 class="rounded-[10px] bg-custom-blue py-4 px-[30px] lg:px-[38px] lg:py-5 text-white lg:max-w-[449px] lg:shadow-[1px_1px_5px_1px_#00000033]">
                 <h1 class="text-[22px] lg:text-2xl font-merriweather">Get Notified</h1>

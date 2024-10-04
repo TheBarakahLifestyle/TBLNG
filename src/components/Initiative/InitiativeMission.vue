@@ -12,7 +12,7 @@
                 educational resources to those in need, fostering self-
                 sufficiency and sustainable development.</p>
             <div class="mt-[38px] relative lg:hidden">
-                <img src="@/assets/images/initiative/initiative-mission-image.png" class="object-cover -z-10" />
+                <img src="@/assets/images/initiative/initiative-mission-image.jpg" class="object-cover -z-10" />
                 <p class="underline absolute bottom-0 right-0 text-[9px] font-medium">Building a brighter future</p>
             </div>
             <div class="mt-[62px] lg:mt-0 lg:absolute lg:top-[10%] lg:h-fit lg:w-fit lg:left-10 lg:bg-white lg:max-w-[440px] lg:rounded-[10px]">

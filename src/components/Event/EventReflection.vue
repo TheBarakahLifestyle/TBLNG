@@ -17,8 +17,8 @@
                     during the holy month.</p>
             </div>
             <div class="w-full flex items-end gap-x-4 lg:gap-x-[28px] justify-between h-fit">
-                <img src="@/assets/images/event/EventReflectionLarge.png" class="object-cover w-[55%]" />
-                <img src="@/assets/images/event/EventReflectionSmall.png"
+                <img src="@/assets/images/event/EventReflectionLarge.jpg" class="object-cover w-[55%]" />
+                <img src="@/assets/images/event/EventReflectionSmall.jpg"
                     class="object-cover w-[40%] h-[70%] rounded-tr-[10px] rounded-bl-[10px]" />
             </div>
         </div>

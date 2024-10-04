@@ -14,7 +14,7 @@
                     needs and promoting
                     opportunities for all.</p>
                 <div class="hidden lg:block mt-[106px] relative max-w-[512px]">
-                    <img src="@/assets/images/initiative/initiative-mission-image.png" class="object-cover -z-10" />
+                    <img src="@/assets/images/initiative/initiative-mission-image.jpg" class="object-cover -z-10" />
                     <p class="underline absolute bottom-0 right-0  text-sm font-medium">Building a brighter future</p>
                 </div>
             </div>

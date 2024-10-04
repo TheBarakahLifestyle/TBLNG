@@ -57,7 +57,7 @@ async function submitForm() {
                 <!-- image here -->
                 <div class="hidden lg:block rounded-[5px] relative overflow-clip grow max-w-[574px]">
                     <div class="absolute inset-0 bg-custom-blue/40" />
-                    <img src="@/assets/images/contact/ContactUs.png" class="object-cover -z-10 w-full" />
+                    <img src="@/assets/images/contact/ContactUs.jpg" class="object-cover -z-10 w-full" />
                 </div>
                 <div class="lg:max-w-[436px]">
                     <h1 class="text-[22px] lg:text-[28px] text-custom-blue font-merriweather">Connect With Us</h1>

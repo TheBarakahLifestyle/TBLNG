@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   srcDir: "src",
   modules: [
     "@nuxtjs/tailwindcss",
-    "@vueuse/nuxt",
+    "@vueuse/nuxt", // "nuxt-security",
     "@formkit/auto-animate",
-    // "nuxt-security",
+    "nuxt-vuefire",
   ],
   vite: {
     plugins: [
@@ -20,6 +20,17 @@ export default defineNuxtConfig({
         },
       }),
     ],
+  },
+  vuefire: {
+    config: {
+      apiKey: "AIzaSyAh5oZYIiWDVUHrvgIqGl9gr2wV_p4q0tQ",
+      authDomain: "tblt-e31f8.firebaseapp.com",
+      projectId: "tblt-e31f8",
+      appId: "1:134173484559:web:f84d3af5a255256de7657a",
+      storageBucket: "tblt-e31f8.appspot.com",
+      messagingSenderId: "134173484559",
+      // there could be other properties depending on the project
+    },
   },
   // routeRules: {
   //   "/ghost/api/**": {

@@ -15,7 +15,7 @@ const activityList = [
             class="mx-auto max-w-container flex flex-col gap-y-16 lg:flex-row lg:items-center lg:gap-x-10 lg:justify-between w-full">
             <div class="lg:order-2 lg:max-w-[655px] w-full">
                 <img class="w-full object-cover lg:max-w-[525px] lg:max-h-[320px] lg:rounded-tl-[20px] lg:rounded-br-[20px] lg:rounded-bl-[5px] lg:rounded-tr-[5px]  lg:overflow-clip"
-                    src="@/assets/images/event/EventActivity.png" />
+                    src="@/assets/images/event/EventActivity.jpg" />
             </div>
             <div class="lg:max-w-[486px] w-full">
                 <h3 class="text-2xl font-merriweather">Activities</h3>
