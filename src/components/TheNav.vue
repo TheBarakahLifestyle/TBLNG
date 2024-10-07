@@ -17,13 +17,14 @@ const navLinks = [
         label: "Events",
         to: "/events"
     },
-    // {
-    //     label: "Resources",
-    //     to: "/resources"
-    // },
     {
         label: "Initiative",
         to: "/initiative"
+    },
+    {
+        label: "Blog",
+        to: "https://blog.tblt.com.ng",
+        external: true
     },
     {
         label: "Contact us",
@@ -55,8 +56,13 @@ watchEffect(() => {
         <div class="mx-auto max-w-container flex items-center justify-between">
             <img src="@/assets/images/logo.svg" class="w-[72px] lg:w-[121px] aspect-square" />
             <div class="hidden lg:flex items-center gap-x-10 font-roboto">
-                <NuxtLink exactActiveClass="navlink" v-for="(link, index) in navLinks" :key="index" :to="link.to">{{
-                    link.label }}</NuxtLink>
+                <template v-for="(link, index) in navLinks" :key="index">
+                    <a v-if="link.external" :href="link.to" target="_blank">{{
+                        link.label }}</a>
+                    <NuxtLink v-else exactActiveClass="navlink" :to="link.to">{{
+                        link.label }}</NuxtLink>
+                </template>
+
             </div>
 
             <a href="https://selar.co/g844y3" target="_blank"
@@ -88,9 +94,12 @@ watchEffect(() => {
             </button>
         </div>
         <div class="flex flex-col items-center gap-y-6 text-xl font-medium">
-            <NuxtLink @click="screenState.showMobileMenu = false" exactActiveClass="navlink"
-                v-for="(link, index) in navLinks" :key="index" :to="link.to">{{
+            <template v-for="(link, index) in navLinks" :key="index">
+                <a v-if="link.external" @click="screenState.showMobileMenu = false" :href="link.to" target="_blank">{{
+                    link.label }}</a>
+                <NuxtLink v-else @click="screenState.showMobileMenu = false" exactActiveClass="navlink" :to="link.to">{{
                     link.label }}</NuxtLink>
+            </template>
             <a href="https://selar.co/g844y3" target="_blank" @click="handleJoinUs"
                 class="mt-4 rounded-[5px] px-[21px] py-[9px] bg-custom-yellow text-white font-roboto font-medium">Join
                 Us</a>
