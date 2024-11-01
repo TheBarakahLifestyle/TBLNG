@@ -1,5 +1,18 @@
 <script setup lang="ts">
 const { email, name, pending, joinUs, phone } = useJoinUs()
+
+const handleSubmitForm = event => {
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    })
+        .then(() => useToast().success("You details have been recorded successfully"))
+        .catch(error => useToast().success("Something went wrong", error));
+};
 </script>
 
 <template>
@@ -15,14 +28,16 @@ const { email, name, pending, joinUs, phone } = useJoinUs()
                     offerings by
                     signing up for
                     our newsletter.</p>
-                    <!-- @submit.prevent="joinUs" -->
-                <form name="Join us" netlify method="POST" class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
+                <!-- @submit.prevent="joinUs" -->
+                <form @submit.prevent="handleSubmitForm" name="Join Us" data-netlify="true" method="post"
+                    class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
+                    <input type="hidden" name="form-name" value="Join Us" />
                     <div class="flex flex-col w-full gap-y-8">
-                        <input v-model.trim="name" placeholder="Name" name="name" type="text" required
+                        <input placeholder="Name" name="name" type="text" required
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
-                        <input v-model.trim="email" placeholder="Email Address" name="email" type="email" required
+                        <input placeholder="Email Address" name="email" type="email" required
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
-                        <input v-model.trim="phone" placeholder="Phone Number" name="phone" type="text"
+                        <input placeholder="Phone Number" name="phone" type="text"
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
                     </div>
                     <!-- 
@@ -35,7 +50,7 @@ const { email, name, pending, joinUs, phone } = useJoinUs()
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
                     </div>
                      -->
-                    <button :disabled="pending"
+                    <button type="submit" :disabled="pending"
                         class="h-8 lg:h-[38px] rounded-[5px] px-4 text-sm lg:text-base font-roboto text-custom-blue bg-white text-center w-fit font-medium">{{
                             pending ? "loading..." : "Join Us"
                         }}</button>
