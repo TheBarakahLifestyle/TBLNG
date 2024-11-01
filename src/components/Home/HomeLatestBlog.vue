@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import GhostContentAPI, { type PostsOrPages } from '@tryghost/content-api'
-const runtimeConfig  = useRuntimeConfig()
+import blog1 from "@/assets/images/home/blog-1.jpg"
+import blog2 from "@/assets/images/home/blog-2.jpg"
+import blog3 from "@/assets/images/home/blog-3.jpg"
+import blog4 from "@/assets/images/home/blog-4.jpg"
+
+const runtimeConfig = useRuntimeConfig()
 
 const api = new GhostContentAPI({
     url: 'https://the-barakah-lifestyle-ng.ghost.io',
@@ -25,6 +30,33 @@ onMounted(() => {
         getLatestBlogPosts()
     }
 })
+
+const blogPosts = [
+    {
+        title: "The little Bounties from my Rabb",
+        excerpt: 'During a casual conversation with one of my dear sisters about how to stay fit and healthy without overcomplicating things, she said something that resonated deeply with me: "Just because you weren’t directly given something doesn’t mean Allah didn’t want it for you. There are countless ways to interpret this, but it made me reflect on the provisions Allah has granted us—particularly when it comes to maintaining a healthy lifestyle. It reminded me of the importance of avoiding what Allah has forbidden, things that may be harmful to both our body and soul, and instead using what He has made permissible for us.',
+        feature_image: blog1,
+        url: "https://the-barakah-lifestyle-ng.ghost.io/the-little-bounties-from-my-rabb"
+    },
+    {
+        title: "Here’s What Happens When You Don’t Take Action...",
+        excerpt: 'Doubt and fear begin to grow—it’s that simple. Every time I get inspired to start something, the "what ifs" somehow creep in. That inner voice can be so strong and overwhelming that I end up thinking, Yeah, maybe I shouldn’t even bother. All I can hear is, Fear, fear, fear.',
+        feature_image: blog2,
+        url: "https://the-barakah-lifestyle-ng.ghost.io/heres-what-happens-when-you-dont-take-action"
+    },
+    {
+        title: "The Broken Clay, The Relentless Potter",
+        excerpt: "Even on the days our minds can't submit, our bodies should still make their way to Allah.I battle with major depression. Unlike sadness, I do not need a reason. I can be content with my haves and patient in my have-nots, and my trigger can be as mundane as a conversation gone wrong, with the effect as damaging as a fall into the deepest depressive episode, from the highest cliff of happiness I have climbed in a while. It sucks all joy, all connection from everything I hold dear. I become detached from everything, and that includes my Islam.",
+        feature_image: blog3,
+        url: "https://the-barakah-lifestyle-ng.ghost.io/the-broken-clay-the-relentless-potter"
+    },
+    {
+        title: "Bismillah: A Fresh Start",
+        excerpt: "By the will of Allah, we’ve made a significant move, and we couldn’t be more excited and hopeful for what lies ahead.It’s been a remarkable journey with The Barakah Lifestyle Initiative (TBL). From its early days as Sr. Bk’s university blog, transitioning through ‘Barakah’s Thoughts’ to TBLT, and now evolving into TBL NG, we’ve seen incredible growth and transformation. As we expanded, it became clear that we needed to implement more robust systems, structures, and proper representation to support our new direction.",
+        feature_image: blog4,
+        url: "https://the-barakah-lifestyle-ng.ghost.io/bismillah-a-fresh-start"
+    }
+]
 </script>
 
 <template>
@@ -36,7 +68,7 @@ onMounted(() => {
                 </p>
 
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-14 mt-11 lg:mt-[100px]">
-                    <div v-for="post in posts" :key="post.id" class="group flex flex-col gap-5">
+                    <div v-for="(post, index) in blogPosts" :key="index" class="group flex flex-col gap-5">
                         <div class="space-y-4 group-even:order-2">
                             <h3
                                 class="font-roboto font-medium leading-5 lg:text-2xl lg:leading-8 capitalize line-clamp-2">

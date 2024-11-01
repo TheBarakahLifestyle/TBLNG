@@ -23,7 +23,7 @@ const navLinks = [
     },
     {
         label: "Blog",
-        to: "https://blog.tblt.com.ng",
+        to: "https://the-barakah-lifestyle-ng.ghost.io",
         external: true
     },
     {

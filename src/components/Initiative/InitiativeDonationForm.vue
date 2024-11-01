@@ -56,6 +56,32 @@ const form = reactive({
     phone: "",
 })
 
+function makeFlutterwavePayment() {
+    useToast().info("initiated donation")
+    FlutterwaveCheckout({
+        public_key: runtimeConfig.public.flutterwaveKey,
+        tx_ref: "TBLT-clear" + new Date(),
+        amount: form.amount,
+        currency: "NGN",
+        // meta: {
+        //     source: "docs-inline-test",
+        //     consumer_mac: "92a3-912ba-1192a",
+        // },
+        customer: {
+            email: form.email,
+            phone_number: form.phone,
+            name: form.firstName,
+        },
+        customizations: {
+            title: "The Barakah Lifestyle NG",
+            description: form.purpose,
+            logo: "https://checkout.flutterwave.com/assets/img/rave-logo.png",
+        },
+        callback: onSuccess,
+        onclose: onCancel
+    });
+}
+
 </script>
 
 <template>

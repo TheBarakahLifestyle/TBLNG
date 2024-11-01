@@ -15,15 +15,26 @@ const { email, name, pending, joinUs, phone } = useJoinUs()
                     offerings by
                     signing up for
                     our newsletter.</p>
-                <form @submit.prevent="joinUs" class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
+                    <!-- @submit.prevent="joinUs" -->
+                <form name="Join us" netlify method="POST" class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
                     <div class="flex flex-col w-full gap-y-8">
-                        <input v-model.trim="name" placeholder="Name" type="text" required
+                        <input v-model.trim="name" placeholder="Name" name="name" type="text" required
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
-                        <input v-model.trim="email" placeholder="Email Address" type="email" required
+                        <input v-model.trim="email" placeholder="Email Address" name="email" type="email" required
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
-                        <input v-model.trim="phone" placeholder="Phone Number" type="text"
+                        <input v-model.trim="phone" placeholder="Phone Number" name="phone" type="text"
                             class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
                     </div>
+                    <!-- 
+                    <div class="flex flex-col w-full gap-y-8">
+                        <input v-model.trim="name" placeholder="Name" name="name" type="text" required
+                            class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
+                        <input v-model.trim="email" placeholder="Email Address" name="email" type="email" required
+                            class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
+                        <input v-model.trim="phone" placeholder="Phone Number" name="phone" type="text"
+                            class="px-4 outline-none h-[30px] lg:h-10 text-xs lg:text-sm w-full bg-white/30 rounded-[5px]" />
+                    </div>
+                     -->
                     <button :disabled="pending"
                         class="h-8 lg:h-[38px] rounded-[5px] px-4 text-sm lg:text-base font-roboto text-custom-blue bg-white text-center w-fit font-medium">{{
                             pending ? "loading..." : "Join Us"

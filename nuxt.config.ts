@@ -21,6 +21,16 @@ export default defineNuxtConfig({
     public: {
       paystackKey: process.env.VITE_PAYSTACK_KEY,
       ghostClientKey: process.env.VITE_GHOST_CLIENT_KEY,
+      flutterwaveKey: process.env.VITE_FLUTTERWAVE_KEY
+    },
+  },
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://checkout.flutterwave.com/v3.js",
+        },
+      ],
     },
   },
 });
