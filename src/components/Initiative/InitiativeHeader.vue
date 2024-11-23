@@ -4,7 +4,7 @@
             class="mx-auto max-w-container flex flex-col lg:flex-row lg:justify-between bg-custom-blue px-4 pt-3 rounded-bl-[50px] lg:rounded-none lg:bg-white lg:gap-x-14">
             <div class="text-xs text-white lg:text-black max-w-[580px] lg:shrink">
                 <h1 class="text-[22px] font-merriweather lg:text-[32px] leading-7 lg:leading-8">The Barakah Lifestyle
-                    Initiative Page</h1>
+                    Initiative</h1>
                 <p class="mt-6 lg:mt-[50px] font-medium lg:text-base leading-7 lg:leading-8">The Barakah Lifestyle
                     Initiative is an Islamic charitable
                     organization dedicated to eradicating hunger and
