@@ -5,31 +5,31 @@ import blog2 from "@/assets/images/home/blog-2.jpg"
 import blog3 from "@/assets/images/home/blog-3.jpg"
 import blog4 from "@/assets/images/home/blog-4.jpg"
 
-const runtimeConfig = useRuntimeConfig()
+// const runtimeConfig = useRuntimeConfig()
 
-const api = new GhostContentAPI({
-    url: 'https://the-barakah-lifestyle-ng.ghost.io',
-    key: runtimeConfig.public.ghostClientKey,
-    version: "v5.0"
-});
+// const api = new GhostContentAPI({
+//     url: 'https://the-barakah-lifestyle-ng.ghost.io',
+//     key: runtimeConfig.public.ghostClientKey,
+//     version: "v5.0"
+// });
 
-async function getLatestBlogPosts() {
-    try {
-        const res = await api.posts.browse({ limit: 4 })
-        posts.value = res
-    } catch (error) {
-        console.log("ERROR", error)
-    }
+// async function getLatestBlogPosts() {
+//     try {
+//         const res = await api.posts.browse({ limit: 4 })
+//         posts.value = res
+//     } catch (error) {
+//         console.log("ERROR", error)
+//     }
 
-}
+// }
 
-const posts = ref<PostsOrPages>()
+// const posts = ref<PostsOrPages>()
 
-onMounted(() => {
-    if (!posts.value) {
-        getLatestBlogPosts()
-    }
-})
+// onMounted(() => {
+//     if (!posts.value) {
+//         getLatestBlogPosts()
+//     }
+// })
 
 const blogPosts = [
     {
