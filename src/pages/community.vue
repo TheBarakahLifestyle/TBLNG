@@ -23,7 +23,7 @@ const { email, name, pending, joinUs } = useJoinUs()
                             connection, growth, and
                             support, where each
                             member plays a vital
-                            role in enriching our collecti- ve experience.</p>
+                            role in enriching our collective experience.</p>
                     </div>
 
                 </div>

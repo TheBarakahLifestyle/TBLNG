@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     public: {
       paystackKey: process.env.VITE_PAYSTACK_KEY,
       ghostClientKey: process.env.VITE_GHOST_CLIENT_KEY,
-      flutterwaveKey: process.env.VITE_FLUTTERWAVE_KEY
+      flutterwaveKey: process.env.VITE_FLUTTERWAVE_KEY,
+      seamailerKey: process.env.VITE_SEAMAILER_PUBKEY,
     },
   },
   app: {

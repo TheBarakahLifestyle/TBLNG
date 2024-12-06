@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const { email, name, pending, joinUs, phone } = useJoinUs()
 
-const handleSubmitForm = event => {
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+// const handleSubmitForm = event => {
+//     const myForm = event.target;
+//     const formData = new FormData(myForm);
 
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-    })
-        .then(() => useToast().success("You details have been recorded successfully"))
-        .catch(error => useToast().success("Something went wrong", error));
-};
+//     fetch("/", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: new URLSearchParams(formData).toString()
+//     })
+//         .then(() => useToast().success("You details have been recorded successfully"))
+//         .catch(error => useToast().success("Something went wrong", error));
+// };
 </script>
 
 <template>
@@ -29,7 +29,7 @@ const handleSubmitForm = event => {
                     signing up for
                     our newsletter.</p>
                 <!-- @submit.prevent="joinUs" -->
-                <form @submit.prevent="handleSubmitForm" name="Join Us" data-netlify="true" method="post"
+                <form @submit.prevent="joinUs" name="Join Us"
                     class="mt-8 lg:mt-[50px] flex flex-col gap-y-10 lg:gap-y-16">
                     <input type="hidden" name="form-name" value="Join Us" />
                     <div class="flex flex-col w-full gap-y-8">

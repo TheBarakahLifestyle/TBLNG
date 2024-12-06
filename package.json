@@ -19,11 +19,13 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "@paystack/inline-js": "^2.20.3",
+    "@seamailer/seamailer-js": "^0.0.3",
     "@tryghost/admin-api": "^1.13.12",
     "@tryghost/content-api": "^1.11.21",
     "@ts-ghost/admin-api": "^4.2.1",
     "@vueuse/core": "^11.1.0",
     "@vueuse/nuxt": "^11.0.3",
+    "install": "^0.13.0",
     "nanoid": "^5.0.7",
     "nuxt": "^3.13.0",
     "tailwind-merge": "^2.5.2",
