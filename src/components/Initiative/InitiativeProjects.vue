@@ -46,8 +46,8 @@ function openProjectDonationForm(purpose: string) {
                     @donate="openProjectDonationForm('Thrive Symposium')">
                     <img src="@/assets/images/initiative/initiative-project-3.jpg" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
-                <InitiativeProjectCard donation-purpose="Water Projects"
-                    @donate="openProjectDonationForm('Water Projects')">
+                <InitiativeProjectCard donation-purpose="Orphans Sponsorships"
+                    @donate="openProjectDonationForm('Orphans Sponsorships')">
                     <img src="@/assets/images/initiative/initiative-project-4.jpg" class="w-full h-full object-cover" />
                 </InitiativeProjectCard>
                 <InitiativeProjectCard donation-purpose="Uni-Student Food"

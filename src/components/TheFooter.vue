@@ -55,7 +55,7 @@
                             fill="white" />
                     </svg>
 
-                    2024 The Baraqah Lifestyle
+                    {{ new Date().getFullYear() }} The Barakah Lifestyle
                 </span>
             </div>
         </section>
